@@ -7,7 +7,7 @@ export const ImageStat: React.FC<{
   icon: IconType
 }> = ({text, icon}) => (
   <HStack>
-    <Text>{text}</Text>
-    <Icon as={icon} w={4} />
+    <Text fontSize="xs">{text}</Text>
+    <Icon as={icon} width={3} />
   </HStack>
 )

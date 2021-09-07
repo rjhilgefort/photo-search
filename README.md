@@ -18,6 +18,15 @@ Image search using [pixabay.com](https://pixabay.com/). Allows for searching by 
 | "typescript"           | Static typing                                                        |
 | "zod"                  | Runtime type checking                                                |
 
+## Environment variables
+
+Update in `.env`. See `.env.example`.
+
+| Env Var                   | Default |
+| ------------------------- | ------- |
+| REACT_APP_PIXABAY_API_KEY |         |
+| REACT_APP_PIXABAY_URL     |         |
+
 ## Screen Shots
 
 ### Search Results
@@ -31,6 +40,13 @@ Image search using [pixabay.com](https://pixabay.com/). Allows for searching by 
 ### Error Boundary
 
 ![](./docs/error-boundary.png)
+
+## Quick Start
+
+```shell
+yarn install
+yarn start
+```
 
 ## Available Scripts
 

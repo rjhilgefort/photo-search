@@ -38,6 +38,7 @@ export const Search: React.FC<{
             placeholder="Keyword..."
             _placeholder={{color: 'grey'}}
             onChange={keywordOnChange}
+            isRequired
           ></Input>
         </FormControl>
         <FormControl>

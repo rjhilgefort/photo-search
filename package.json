@@ -6,6 +6,7 @@
     "node": ">=16.1.0"
   },
   "scripts": {
+    "preinstall": "use-yarn",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -43,9 +44,9 @@
     "react-icons": "^4.2.0",
     "react-scripts": "4.0.3",
     "typescript": "^4.2.3",
+    "use-yarn": "^2.2.0",
     "zod": "^3.8.1"
   },
-  "devDependencies": {},
   "browserslist": {
     "production": [
       ">0.2%",
