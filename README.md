@@ -18,6 +18,20 @@ Image search using [pixabay.com](https://pixabay.com/). Allows for searching by 
 | "typescript"           | Static typing                                                        |
 | "zod"                  | Runtime type checking                                                |
 
+## Screen Shots
+
+### Search Results
+
+![](./docs/results.png)
+
+### No Results
+
+![](./docs/no-results.png)
+
+### Error Boundary
+
+![](./docs/error-boundary.png)
+
 ## Available Scripts
 
 In the project directory, you can run:
