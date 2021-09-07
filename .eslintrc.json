@@ -1,0 +1,16 @@
+{
+  "extends": "./node_modules/gts/",
+  "env": {
+    "browser": true,
+    "jest": true
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "rules": {
+    "node/no-unpublished-require": "off",
+    "node/no-unpublished-import": "off"
+  }
+}
