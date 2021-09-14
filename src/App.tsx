@@ -1,6 +1,6 @@
 import {Box, Flex, Spinner, VStack} from '@chakra-ui/react'
 import {pipe} from 'fp-ts/lib/function'
-import {append, without} from 'ramda'
+import {append, isNil, without} from 'ramda'
 import * as React from 'react'
 import {ErrorBoundary} from 'react-error-boundary'
 import {Saved, Search, ErrorFallback, Results} from './components'
@@ -27,8 +27,20 @@ export const App = () => {
   >(searchResultsInitial)
 
   const savedImagesInitial = []
-  const [savedImages, setSavedImages] =
-    React.useState<Array<ImageResult>>(savedImagesInitial)
+  const savedImages_storageKey = 'savedImage'
+  const [savedImages, setSavedImages] = React.useState<Array<ImageResult>>(
+    () => {
+      const storageSavedImages = localStorage.getItem(savedImages_storageKey)
+
+      return isNil(storageSavedImages)
+        ? savedImagesInitial
+        : JSON.parse(storageSavedImages)
+    }
+  )
+
+  React.useEffect(() => {
+    localStorage.setItem(savedImages_storageKey, JSON.stringify(savedImages))
+  }, [savedImages])
 
   const errorBoundaryOnReset = () => {
     setSearchResults(searchResultsInitial)
